@@ -7,7 +7,7 @@ public class ExampleTryCatch{
 
     public void run(){
         setup();
-        shop.findPetByName("Meowingtons");
+        shop.findPetByName(null;
 
     }
 
