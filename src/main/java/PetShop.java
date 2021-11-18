@@ -1,4 +1,5 @@
 import behaviours.Pet;
+import exceptions.NullStringException;
 
 import java.util.ArrayList;
 
@@ -10,7 +11,11 @@ public class PetShop{
         stock = new ArrayList<Pet>();
     }
 
-    public Pet findPetByName(String searchName)  {
+    public Pet findPetByName(String searchName) throws NullStringException {
+
+        if(searchName == null){
+            throw new NullStringException("Cannot search for a pet with null instead of a string.");
+        }
 
         String searchLower = searchName.toLowerCase();
 
